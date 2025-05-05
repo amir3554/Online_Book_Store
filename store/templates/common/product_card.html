@@ -1,0 +1,16 @@
+{% load i18n %}
+{% load my_filters %}
+
+<div class="product card mb-4">
+    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}"/>
+    <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
+        <a class="btn btn-outline-light" data-url="{% url 'StoreCartUpdate' product.id %}"
+        onclick="cart_update(this)">{% trans "Add To Cart" %}</a>
+        <a class="btn btn-outline-light mt-2" href="{% url 'StoreProduct' product.id %}">{% trans "View" %}</a>
+    </div>
+    <div class="card-body">
+        <h6 class="text-muted">{{ product.author.name }}</h6>
+        <h6 class="card-title">{{ product.name }}</h6>
+        <strong class="fw-bold text-success">{{ product.price|currency }}</strong>
+    </div>
+</div>

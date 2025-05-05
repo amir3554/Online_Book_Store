@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+
+
+<div class="bg-white py-4">
+    <h1 class="text-center text-secondary">{% trans "Your Order Is Complete." %}</h1>
+  </div>
+  <div class="container my-5">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center">
+          <i class="lni lni-checkmark-circle text-muted display-1"></i>
+        </h1>
+        <p class="text-center mt-4">{% trans "
+          The purchase has been successful, you will receive an email with links
+          To download the books you ordered!"%}
+        </p>
+        <p class="text-center">
+          <a href="{% url "StoreHome" %}" class="btn btn-primary">{% trans "Back To Main Page." %}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock content %}
+

@@ -1,0 +1,20 @@
+{% load i18n %}
+
+<form  class="d-flex mx-auto" method='GET' action="{% url 'SearchProduct'%}">
+    <div class="input-group">
+        <input name="query" value="{{ request.GET.query }}" type="search" class="form-control" style="..." placeholder="{% trans 'Search Bar' %}"/>
+        <select name="category" class="form-control" style="...">
+            <option value="">{% trans 'All Categories' %}</option>
+            {% for category in categories %}
+                <option 
+                value="{{category.id}}"
+                {% if category.id|stringformat:'i' == request.GET.category %} selected {% endif %}
+                >{{category.name}}
+                {% empty %}{% trans "No resaults" %}</option>
+            {% endfor %}
+        </select>
+        <button class="btn btn-primary" type="submit">
+            <i class="lni lni-search-alt text-white"></i>
+        </button>
+    </div>
+</form>
