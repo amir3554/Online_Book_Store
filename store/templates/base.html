@@ -2,14 +2,11 @@
 {% load i18n %}
 
 <!DOCTYPE html>
-<html lang="ar" class="h-100" dir="rtl">
+<html lang="en" class="h-100" dir="ltr">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% trans 'App Name' %}</title>
-    <script defer src="{% static 'js/101.add19763.js' %}"></script>
-    <script defer src="{% static 'js/app.0702f7fb.js' %}"></script>
-    <script src="https://js.stripe.com/v3/"></script>
+    <title>{% trans 'My Book Store' %}</title>
     <link href="{% static 'css/101.css' %}" rel="stylesheet">
     <link href="{% static 'css/app.css' %}" rel="stylesheet">
 </head>
@@ -27,6 +24,9 @@
     
     {% include "partials/footer.html" %}
 
+    <script defer src="{% static 'js/101.add19763.js' %}"></script>
+    <script defer src="{% static 'js/app.0702f7fb.js' %}"></script>
+    <script src="https://js.stripe.com/v3/"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/stripe.js' %}"></script>

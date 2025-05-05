@@ -1,6 +1,6 @@
 {% load i18n %}
 
-<form  class="d-flex mx-auto" method='GET' action="{% url 'SearchProduct'%}">
+<form  class="d-flex mx-auto" method='GET'>
     <div class="input-group">
         <input name="query" value="{{ request.GET.query }}" type="search" class="form-control" style="..." placeholder="{% trans 'Search Bar' %}"/>
         <select name="category" class="form-control" style="...">

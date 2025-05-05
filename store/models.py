@@ -51,7 +51,7 @@ class Product(models.Model):
 class Slider(models.Model):
     title = models.CharField(max_length=255)
     subtitle = models.TextField(max_length=500)
-    image = models.ImageField(null=True)
+    image = models.ImageField(upload_to='slider_images/',null=True)
     order = models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -63,4 +63,4 @@ class Slider(models.Model):
 
 class Cart(models.Model):
     session = models.ForeignKey(Session, on_delete=models.CASCADE)
-    items = models.JSONField(default=True)
+    items = models.JSONField(default=dict)
