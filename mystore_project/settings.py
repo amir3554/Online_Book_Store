@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'store',
-    'oprations'
+    'oprations',
+    'paypal'
 ]
 
 MIDDLEWARE = [
@@ -135,4 +136,26 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
+from . import sicret_info
 
+EMAIL_HOST = sicret_info.EMAIL_HOST
+EMAIL_HOST_USER = sicret_info.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = sicret_info.EMAIL_HOST_PASSWORD
+EMAIL_PORT = sicret_info.EMAIL_PORT
+EMAIL_TIMEOUT = 30
+EMAIL_USE_TLS = True 
+EMAIL_USE_SSL = False 
+
+SITE_URL = 'http://127.0.0.1:8000/'
+
+import logging
+logging.basicConfig(level=logging.DEBUG)
+
+STRIPE_PUBLISHABLE_KEY = sicret_info.STRIPE_PUBLISHABLE_KEY
+STRIPE_SECRET_KEY = sicret_info.STRIPE_SECRET_KEY
+STRIPE_ENDPOINT_SECRET = sicret_info.STRIPE_ENDPOINT_SECRET
+
+PAYPAL_EMAIL = sicret_info.PAYPAL_EMAIL
+PAYPAL_TEST = True
+
+CURRENCY = 'USD'
