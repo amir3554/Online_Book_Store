@@ -35,7 +35,7 @@ def make_transaction(request, pm):
         return Transaction.objects.create(
             customer=form.cleaned_data,
             session=request.session.session_key,
-            paymeny_method=pm,
+            payment_method=pm,
             items = cart.items, #type:ignore
             amount= math.ceil(total),
             )

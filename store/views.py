@@ -30,38 +30,7 @@ def product(request, pid):
         }
     )
 
-# def category(request, cid=None):
 
-#     filters = Q()
-#     query = request.GET.get('query', None)
-#     category = request.GET.get('category', None)
-#     products = Product.objects.all()
-
-#     if query:
-#         filters = Q(name__icontains=query) | Q(description__icontains=query)
-
-#         if category:
-#             filters &= Q(category_id=category)
-    
-#     if ( category or cid ) and not query :
-#         filters = Q(category_id=category)
-
-#     if filters:
-#         products = Product.objects.filter(filters)
-
-#     paginator = Paginator(products, 9)
-#     page_number = request.GET.get('page')
-#     page_obj = paginator.get_page(page_number)
-
-
-#     return render(
-#         request, 'category.html',
-#         {
-#             'page_obj' : page_obj,
-#             'category' : category,
-#             'query' : query
-#         }
-#     )
 
 
 def category(request, category=None):
