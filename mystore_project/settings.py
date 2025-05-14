@@ -184,7 +184,7 @@ EMAIL_TIMEOUT = 30
 EMAIL_USE_TLS = True 
 EMAIL_USE_SSL = False 
 
-SITE_URL = 'http://127.0.0.1:8000/'
+SITE_URL = 'https://book-store-amir-ddeca9aa50ad.herokuapp.com/'
 
 import logging
 logging.basicConfig(level=logging.DEBUG)
