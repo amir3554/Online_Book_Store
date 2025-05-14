@@ -19,10 +19,11 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from . import settings
 from . import secret_info
+import os
 
 
 urlpatterns = [
-    path(secret_info.ADMIN_SITE_URL, admin.site.urls),
+    path(os.environ['ADMIN_SITE_URL'], admin.site.urls),
     path('MyBookStore/', include('store.urls')),
     path('oprations/', include('oprations.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

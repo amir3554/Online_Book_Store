@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = secret_info.SECRET_KEY3
+SECRET_KEY = os.environ['SECRET_KEY3']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -109,9 +109,9 @@ DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        'HOST' : 'nivk0hz7m5elq4ql.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',
-        'USERNAME' : 'a3gb0eewmvfcl775',
-        'PASSWORD' : 'tibpbqnayuyi75dn',
+        'HOST' : os.environ['DB_HOST'],
+        'USERNAME' : os.environ['DB_USERNAME'],
+        'PASSWORD' : os.environ['DB_PASSWORD'],
         'PORT': '3306',
         'DATABASE' : 'k11pi2l13e0y96tu',
         
@@ -173,10 +173,10 @@ MEDIA_URL = '/media/'
 
 from . import secret_info
 
-EMAIL_HOST = secret_info.EMAIL_HOST
-EMAIL_HOST_USER = secret_info.EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = secret_info.EMAIL_HOST_PASSWORD
-EMAIL_PORT = secret_info.EMAIL_PORT
+EMAIL_HOST = os.environ['EMAIL_HOST']
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
+EMAIL_PORT = os.environ['EMAIL_PORT']
 EMAIL_TIMEOUT = 30
 EMAIL_USE_TLS = True 
 EMAIL_USE_SSL = False 
@@ -186,11 +186,11 @@ SITE_URL = 'http://127.0.0.1:8000/'
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
-STRIPE_PUBLISHABLE_KEY = secret_info.STRIPE_PUBLISHABLE_KEY
-STRIPE_SECRET_KEY = secret_info.STRIPE_SECRET_KEY
-STRIPE_ENDPOINT_SECRET = secret_info.STRIPE_ENDPOINT_SECRET
+STRIPE_PUBLISHABLE_KEY = os.environ['STRIPE_PUBLISHABLE_KEY']
+STRIPE_SECRET_KEY = os.environ['STRIPE_SECRET_KEY']
+STRIPE_ENDPOINT_SECRET = os.environ['STRIPE_ENDPOINT_SECRET']
 
-PAYPAL_EMAIL = secret_info.PAYPAL_EMAIL
+PAYPAL_EMAIL = os.environ['PAYPAL_EMAIL']
 PAYPAL_TEST = False
 
 CURRENCY = 'USD'
