@@ -29,7 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    ''
+    'book-store-amir-ddeca9aa50ad.herokuapp.com'
 ]
 
 
@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise'
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'mystore_project.urls'
@@ -83,10 +83,39 @@ WSGI_APPLICATION = 'mystore_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+
+
+# import dj_database_url
+
+# if 'JAWSDB_URL' in os.environ:
+#     DATABASES = {
+#         'default': dj_database_url.config(
+#             default=os.environ['JAWSDB_URL'],
+#             conn_max_age=600,
+#             ssl_require=True
+#         )
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+
+
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+        'HOST' : 'nivk0hz7m5elq4ql.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',
+        'USERNAME' : 'a3gb0eewmvfcl775',
+        'PASSWORD' : 'tibpbqnayuyi75dn',
+        'PORT': '3306',
+        'DATABASE' : 'k11pi2l13e0y96tu',
+        
     }
 }
 
