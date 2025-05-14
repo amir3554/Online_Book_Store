@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+from . import secret_info
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$z#(et2kw(g25%#1jn4s2u%967i6ast5(b540l+@+x9vi+&vta'
+SECRET_KEY = secret_info.SECRET_KEY3
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    ''
+]
 
 
 # Application definition
@@ -52,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise'
 ]
 
 ROOT_URLCONF = 'mystore_project.urls'
@@ -138,12 +143,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
-from . import sicret_info
+from . import secret_info
 
-EMAIL_HOST = sicret_info.EMAIL_HOST
-EMAIL_HOST_USER = sicret_info.EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = sicret_info.EMAIL_HOST_PASSWORD
-EMAIL_PORT = sicret_info.EMAIL_PORT
+EMAIL_HOST = secret_info.EMAIL_HOST
+EMAIL_HOST_USER = secret_info.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = secret_info.EMAIL_HOST_PASSWORD
+EMAIL_PORT = secret_info.EMAIL_PORT
 EMAIL_TIMEOUT = 30
 EMAIL_USE_TLS = True 
 EMAIL_USE_SSL = False 
@@ -153,11 +158,11 @@ SITE_URL = 'http://127.0.0.1:8000/'
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
-STRIPE_PUBLISHABLE_KEY = sicret_info.STRIPE_PUBLISHABLE_KEY
-STRIPE_SECRET_KEY = sicret_info.STRIPE_SECRET_KEY
-STRIPE_ENDPOINT_SECRET = sicret_info.STRIPE_ENDPOINT_SECRET
+STRIPE_PUBLISHABLE_KEY = secret_info.STRIPE_PUBLISHABLE_KEY
+STRIPE_SECRET_KEY = secret_info.STRIPE_SECRET_KEY
+STRIPE_ENDPOINT_SECRET = secret_info.STRIPE_ENDPOINT_SECRET
 
-PAYPAL_EMAIL = sicret_info.PAYPAL_EMAIL
-PAYPAL_TEST = True
+PAYPAL_EMAIL = secret_info.PAYPAL_EMAIL
+PAYPAL_TEST = False
 
 CURRENCY = 'USD'
