@@ -5,8 +5,7 @@
 __pycache__/
 db.sqlite3
 db.sqlite3-*
-media/
-static/
+
 
 # Django >= 1.9
 *.sqlite3
@@ -91,7 +90,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 db.sqlite3
-/media/
 /staticfiles/
 
 # Environments
@@ -140,7 +138,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /webpack-stats.json
-/static/
+
 
 # Deployment
 *.egg-info/
