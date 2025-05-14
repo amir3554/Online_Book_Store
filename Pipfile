@@ -11,6 +11,20 @@ paypal = "1.2.5"
 stripe = "12.1.0"
 dj-database-url = "*"
 
+asgiref = "3.8.1"
+certifi = "2025.4.26"
+charset-normalizer = "3.4.2"
+Django = "5.2.1"
+idna = "3.10"
+packaging = "25.0"
+requests = "2.32.3"
+sqlparse = "0.5.3"
+typing_extensions = "4.13.2"
+tzdata = "2025.2"
+urllib3 = "2.4.0"
+
+
+
 [dev-packages]
 
 [requires]
