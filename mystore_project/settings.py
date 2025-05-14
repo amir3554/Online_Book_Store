@@ -32,7 +32,6 @@ ALLOWED_HOSTS = [
     'book-store-amir-ddeca9aa50ad.herokuapp.com'
 ]
 
-
 # Application definition
 
 INSTALLED_APPS = [

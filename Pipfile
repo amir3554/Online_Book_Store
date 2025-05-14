@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 
+django   = "==4.2.5"
+gunicorn = "*"
+
 [dev-packages]
 
 [requires]
