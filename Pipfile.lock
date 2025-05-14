@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6a46a129d72d578a464588dc4e1d1c2c5df578ceb3b04b1898fd4662990beb31"
+            "sha256": "c0cb94f688716edeaa524429cf6cd37eb6de4dbcb6443c8fcc23f39285777f80"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -150,6 +150,15 @@
             "markers": "python_version >= '3.10'",
             "version": "==5.2.1"
         },
+        "django-paypal": {
+            "hashes": [
+                "sha256:27d574627035d52e95f0f40f23ad7c2e4289b7c57e959e1fa9ffb9956fab4e44",
+                "sha256:3bf83e99f3370e015f12747a688baa2a2c072318a3d3410aa0203d03e1eb28a3"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.7'",
+            "version": "==2.1"
+        },
         "gunicorn": {
             "hashes": [
                 "sha256:ec400d38950de4dfd418cff8328b2c8faed0edb0d517d3394e457c317908ca4d",
@@ -199,6 +208,13 @@
             ],
             "index": "pypi",
             "version": "==1.2.5"
+        },
+        "pytz": {
+            "hashes": [
+                "sha256:360b9e3dbb49a209c21ad61809c7fb453643e048b38924c765813546746e81c3",
+                "sha256:5ddf76296dd8c44c26eb8f4b6f35488f3ccbf6fbbd7adee0b7262d43f0ec2f00"
+            ],
+            "version": "==2025.2"
         },
         "requests": {
             "hashes": [
