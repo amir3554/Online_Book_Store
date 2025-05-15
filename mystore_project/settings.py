@@ -118,7 +118,9 @@ DATABASES = {}
 
 import dj_database_url
 DATABASES['default'] = dj_database_url.config(
-    default= os.environ.get('JAWSDB_MARIA_URL')
+    default= 'mysql://yqub2iquk871u0sq:doc27gqllmfqmfhc@u615qyjzybll9lrm.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/ixebs8t3ugjsip3m'
+
+#os.environ.get('JAWSDB_MARIA_URL')
     )
 
 
