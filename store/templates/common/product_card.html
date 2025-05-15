@@ -2,7 +2,7 @@
 {% load my_filters %}
 
 <div class="product card mb-4">
-    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}"/>
+    {% comment %} <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}"/> {% endcomment %}
     <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
         <a class="btn btn-outline-light" data-url="{% url 'StoreCartUpdate' product.id %}"
         onclick="cart_update(this)">{% trans "Add To Cart" %}</a>
