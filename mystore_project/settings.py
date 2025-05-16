@@ -107,12 +107,11 @@ DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        'HOST' : os.environ['DB_HOST'],
-        'USERNAME' : os.environ['DB_USERNAME'],
-        'PASSWORD' : os.environ['DB_PASSWORD'],
+        'HOST' : 'u615qyjzybll9lrm.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',#os.environ['DB_HOST'],
+        'USERNAME' : 'yqub2iquk871u0sq',#os.environ['DB_USERNAME'],
+        'PASSWORD' : 'doc27gqllmfqmfhc',#os.environ['DB_PASSWORD'],
         'PORT': '3306',
         'DATABASE' : 'k11pi2l13e0y96tu',
-        
     }
 }
 
