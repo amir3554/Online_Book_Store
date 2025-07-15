@@ -1,0 +1,78 @@
+Online_Book_Store
+
+A fully featured online bookstore built on Django, Bootstrap 5, and custom CSS/JavaScript.  
+Accept payments via Stripe and PayPal, showcase promotions with sliders, organize books by category, and manage a shopping cart—all with a smooth, responsive UI.
+
+Features:
+
+- Django-backed:
+
+  Authentication, models, views, admin interface.
+
+- Responsive Front End:
+
+  Bootstrap 5 + custom CSS for a clean, mobile-friendly layout.
+
+- Payment Gateways:
+
+  - Stripe: (one-click checkout, saved cards)  
+  - PayPal: (guest checkout or logged-in PayPal users)
+
+- Promotional Sliders:
+
+  - Sales Slider: highlight current discounts  
+  - News Slider: showcase latest announcements or new arrivals
+
+- Book Catalog :
+  - Categorize by genre (development, design, basics, engineering, etc.)  
+  - Search bar + filter by category
+
+- Shopping Cart :
+  - Add/update/remove items  
+  - Real-time cart total updates via AJAX  
+
+- Order History:
+  - Customers can view past orders in their profile
+
+- Beautiful CSS & JavaScript:
+
+  - Smooth transitions, modals, tooltips  
+  - AJAX-powered "Add to cart" and slider controls
+
+---
+
+Tech Stack
+
+- Backend: Python 3.13, Django *  
+- Frontend: Bootstrap 5, HTML5, CSS3, Vanilla JavaScript (ES6+), Axios  
+- Payments: Stripe API, PayPal SDK  
+- Database: SQLite (dev) / JAWSDB_URL (production)  
+- Deployment: Gunicorn + Nginx / Heroku / Docker (optional)
+
+---
+
+Browse & Search
+Use the top search bar and category menu.
+
+View Details
+Click a book cover to see descriptions, price, and “Add to Cart.”
+
+Promotions
+
+Sales Slider at the top rotates discounted titles.
+
+News Slider shows site announcements.
+
+Cart & Checkout
+
+“Cart” button shows item count.
+
+Review items, update quantities, remove books.
+
+Choose Stripe or PayPal at checkout.
+
+Profile & Orders
+
+Update your profile picture and bio.
+
+View past order history and invoices.
